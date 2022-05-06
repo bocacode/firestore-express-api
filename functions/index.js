@@ -1,5 +1,5 @@
-const functions = require("firebase-functions");
-const express = require('express');
+import functions from 'firebase-functions';
+import express from 'express';
 
 const app = express();
 
@@ -11,4 +11,4 @@ app.get('/', (req, res) => {
   res.send('This is HOME');
 });
 
-exports.app = functions.https.onRequest(app);
+export const api = functions.https.onRequest(app);
